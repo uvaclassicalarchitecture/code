@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Classical Architecture Society | University of Virginia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="description" content="The Classical Architecture Society at the University of Virginia." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <style>
+    :root{
+      --nav-height: 72px;
+      --cream: #fbf7ef;
+      --ink: #111;
+      --ink-soft: rgba(17,17,17,.85);
+      --hairline: rgba(255,255,255,.55);
+      --shadow: rgba(0,0,0,.25);
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background:#000;
+      overflow-x:hidden;
+    }
+
+    /* NAV (fixed, like the reference) */
+    .navbar{
+      position:fixed;
+      top:0; left:0; right:0;
+      height:var(--nav-height);
+      z-index:1000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      pointer-events:none; /* allow clicks only on inner */
+    }
+
+    .navbar-inner{
+      width:min(1180px, calc(100% - 32px));
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      pointer-events:auto;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:#fff;
+      letter-spacing:.02em;
+      text-transform:none;
+      font-size:16px;
+      line-height:1;
+      filter: drop-shadow(0 2px 10px var(--shadow));
+    }
+
+    .brand img{
+      width:190px;
+      height:auto;
+      display:block;
+    }
+
+    /* fallback if you don’t have a logo file yet */
+    .brand .brand-text{
+      display:none; /* toggle to block if you remove the img */
+      font-variant: small-caps;
+      letter-spacing:.06em;
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      list-style:none;
+      margin:0;
+      padding:0;
+      filter: drop-shadow(0 2px 10px var(--shadow));
+    }
+
+    .nav a{
+      color:#fff;
+      text-decoration:none;
+      font-size:15px;
+      letter-spacing:.02em;
+      text-transform:lowercase;
+      padding:8px 6px;
+      border-bottom:1px solid transparent;
+      transition: border-color .2s ease, opacity .2s ease;
+      opacity:.95;
+    }
+    .nav a:hover{ border-color: var(--hairline); opacity:1; }
+
+    /* Small “dot” styling like the reference */
+    .dot{
+      display:inline-block;
+      margin-left:6px;
+      transform: translateY(-1px);
+      opacity:.95;
+    }
+
+    /* FULLSCREEN SLIDES */
+    .slide{
+      position:fixed;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      opacity:0;
+      transition: opacity 1.2s ease;
+      will-change: opacity;
+    }
+    .slide.current{ opacity:1; }
+
+    /* optional subtle veil to keep nav readable */
+    .veil{
+      position:fixed;
+      inset:0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.10), rgba(0,0,0,0.55));
+      pointer-events:none;
+    }
+
+    /* Bottom-left caption (optional) */
+    .caption{
+      position:fixed;
+      left:22px;
+      bottom:18px;
+      z-index:900;
+      color:rgba(255,255,255,.88);
+      font-size:14px;
+      letter-spacing:.02em;
+      text-shadow: 0 2px 10px var(--shadow);
+      max-width:min(560px, calc(100% - 44px));
+    }
+    .caption em{ font-style:italic; opacity:.95; }
+
+    /* MOBILE */
+    @media (max-width: 760px){
+      .nav{ display:none; }
+      .brand img{ width:170px; }
+      .caption{ font-size:13px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" aria-label="Primary Navigation">
+    <div class="navbar-inner">
+      <a class="brand" href="/">
+        <!-- Replace with your CAS logo file -->
+        <img src="assets/cas-logo@2x.png" alt="Classical Architecture Society" />
+        <span class="brand-text">Classical Architecture Society</span>
+      </a>
+
+      <ul class="nav">
+        <li><a href="/events">events<span class="dot">.</span></a></li>
+        <li><a href="/lectures">lectures<span class="dot">.</span></a></li>
+        <li><a href="/resources">resources<span class="dot">.</span></a></li>
+        <li><a href="/about">about<span class="dot">.</span></a></li>
+        <li><a href="/join">join<span class="dot">.</span></a></li>
+        <li><a href="/contact">contact<span class="dot">.</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SLIDES (full-bleed background images that fade) -->
+  <div id="slide1" class="slide current" style="background-image:url('assets/home/slide-01.jpg');"></div>
+  <div id="slide2" class="slide" style="background-image:url('assets/home/slide-02.jpg');"></div>
+  <div id="slide3" class="slide" style="background-image:url('assets/home/slide-03.jpg');"></div>
+  <div id="slide4" class="slide" style="background-image:url('assets/home/slide-04.jpg');"></div>
+
+  <div class="veil"></div>
+
+  <!-- Optional caption (delete if you want pure image like the reference) -->
+  <div class="caption">
+    <em>Classical Architecture Society</em> — University of Virginia.
+  </div>
+
+  <script>
+    // Simple fade slideshow (same idea as the reference: multiple fixed slides, one "current")
+    (function(){
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      if (!slides.length) return;
+
+      let i = 0;
+      const intervalMs = 6500; // tweak to taste
+
+      // Preload images (helps prevent first-transition flash)
+      slides.forEach(s => {
+        const bg = s.style.backgroundImage;
+        const url = bg.slice(5, -2); // url("...") -> ...
+        const img = new Image();
+        img.src = url;
+      });
+
+      setInterval(() => {
+        slides[i].classList.remove('current');
+        i = (i + 1) % slides.length;
+        slides[i].classList.add('current');
+      }, intervalMs);
+    })();
+  </script>
+
+</body>
+</html>
