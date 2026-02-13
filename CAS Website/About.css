@@ -1,0 +1,238 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 1920px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 450px;
+  height: 300px;
+  margin: 82px 60px 0 auto;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: NanumMyeongjo;
+  font-weight: 800;
+  text-decoration: underline !important;
+  margin: -290px auto 0 48px;
+}
+
+.u-section-1 .u-text-2 {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  margin: 20px 641px 0 48px;
+}
+
+.u-section-1 .u-text-3 {
+  font-family: NanumMyeongjo;
+  font-weight: 800;
+  text-decoration: underline !important;
+  margin: 22px auto 0 48px;
+}
+
+.u-section-1 .u-text-4 {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  margin: 21px 48px 0;
+}
+
+.u-section-1 .u-text-5 {
+  font-family: NanumMyeongjo;
+  font-weight: 800;
+  text-decoration: underline !important;
+  margin: 23px auto 0 48px;
+}
+
+.u-section-1 .u-text-6 {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  margin: 21px 48px 0;
+}
+
+.u-section-1 .u-text-7 {
+  font-family: NanumMyeongjo;
+  font-weight: 800;
+  text-decoration: underline !important;
+  margin: 22px auto 0 48px;
+}
+
+.u-section-1 .u-text-8 {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  margin: 21px 48px 0;
+}
+
+.u-section-1 .u-image-2 {
+  width: 430px;
+  height: 235px;
+  margin: 33px auto 0 48px;
+}
+
+.u-section-1 .u-text-9 {
+  font-family: NanumMyeongjo;
+  font-weight: 800;
+  text-decoration: underline !important;
+  margin: -219px 518px 0 auto;
+}
+
+.u-section-1 .u-text-10 {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  margin: 20px 60px 0 558px;
+}
+
+.u-section-1 .u-text-11 {
+  font-family: NanumMyeongjo;
+  font-weight: 800;
+  text-decoration: underline !important;
+  margin: 94px 928px 0 48px;
+}
+
+.u-section-1 .u-text-12 {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 13px 570px 60px 48px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-image-1 {
+    margin-top: 371px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: -579px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 441px;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-6 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-7 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-8 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-right: 427px;
+  }
+
+  .u-section-1 .u-text-10 {
+    margin-right: 0;
+    margin-left: 418px;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-right: 776px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-12 {
+    margin-right: 418px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-2 {
+    margin-right: 221px;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-top: 20px;
+    margin-right: 327px;
+  }
+
+  .u-section-1 .u-text-10 {
+    margin-left: 198px;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-right: 556px;
+  }
+
+  .u-section-1 .u-text-12 {
+    margin-right: 198px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-image-1 {
+    margin-top: 153px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 41px;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-right: 245px;
+  }
+
+  .u-section-1 .u-text-10 {
+    margin-left: 18px;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-right: 376px;
+  }
+
+  .u-section-1 .u-text-12 {
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 1798px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 340px;
+    height: 227px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-image-2 {
+    width: 340px;
+    height: 186px;
+    margin-top: 157px;
+  }
+
+  .u-section-1 .u-text-9 {
+    margin-top: -331px;
+    margin-right: 154px;
+  }
+
+  .u-section-1 .u-text-10 {
+    margin-left: 0;
+    margin-bottom: -13px;
+  }
+
+  .u-section-1 .u-text-11 {
+    margin-right: 176px;
+  }
+
+  .u-section-1 .u-text-12 {
+    margin-right: 0;
+  }
+}
